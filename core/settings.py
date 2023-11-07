@@ -156,12 +156,4 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ],
 }
-CORS_ORIGIN_ALLOW_ALL = True
-CSRF_COOKIE_SAMESITE = None
-SESSION_COOKIE_SAMESITE = None
-CSRF_COOKIE_HTTPONLY = False  
-SESSION_COOKIE_HTTPONLY = False
 
-# PROD ONLY
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
