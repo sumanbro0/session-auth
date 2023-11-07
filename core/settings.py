@@ -28,7 +28,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ["https://session-auth-production.up.railway.app",'http://127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ["https://session-auth-production.up.railway.app",'http://127.0.0.1:3000','http://127.0.0.1:3000/','http://localhost:3000']
 
 # Application definition
 
