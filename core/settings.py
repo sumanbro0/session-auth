@@ -28,7 +28,8 @@ DEBUG = False
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['*']
-
+if not DEBUG:
+    CSRF_TRUSTED_ORIGINS = ["https://session-auth-production.up.railway.app/"]
 
 # Application definition
 
