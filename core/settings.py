@@ -28,7 +28,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ["https://session-auth-production.up.railway.app",'http://127.0.0.1:3000','http://127.0.0.1:3000/','http://localhost:3000']
+CSRF_TRUSTED_ORIGINS = ["https://session-auth-production.up.railway.app"]
 
 # Application definition
 
@@ -135,10 +135,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATICFILES_DIRS = [
-    # os.path.join(BASE_DIR, '(your project name)/static')
-    os.path.join(BASE_DIR, "core/static")
-]
+# STATICFILES_DIRS = [
+#     # os.path.join(BASE_DIR, '(your project name)/static')
+#     os.path.join(BASE_DIR, "core/static")
+# ]
 STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -157,10 +157,11 @@ REST_FRAMEWORK = {
     ],
 }
 CORS_ORIGIN_ALLOW_ALL = True
-CSRF_COOKIE_SECURE = False
-SESSION_COOKIE_SECURE = False
-CSRF_COOKIE_SAMESITE = 'None'
-SESSION_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SAMESITE = None
+SESSION_COOKIE_SAMESITE = None
+CSRF_COOKIE_HTTPONLY = False  
+SESSION_COOKIE_HTTPONLY = False
 
-# SESSION_COOKIE_DOMAIN = '127.0.0.1'  # Set to your domain
-SESSION_COOKIE_DOMAIN = None
+# PROD ONLY
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
