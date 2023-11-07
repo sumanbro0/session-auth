@@ -5,7 +5,7 @@ __pycache__/
 
 # Local development settings
 *.env
-*.sqlite3
+# *.sqlite3
 
 # Log files
 *.log
@@ -17,7 +17,7 @@ media/
 *.pyc
 
 # Database files
-*.db
+# *.db
 
 # Virtual environment
 venv/
